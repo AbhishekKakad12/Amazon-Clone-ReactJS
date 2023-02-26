@@ -30,3 +30,12 @@
     font-size: 17px;
     font-weight: 800;
 }
+
+.remove_btn{
+    background: #ffd814 !important;
+    padding: 10px 15px;
+    outline: none;
+    border: none !important;
+    box-shadow: 0 0px 5px 0px black;
+    cursor: pointer;
+}

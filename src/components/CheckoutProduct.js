@@ -1,11 +1,13 @@
 import React from "react";
 import { useStore } from "react-redux";
 import "../assets/css/CheckoutProduct.css";
+import StarIcon from "@mui/icons-material/Star";
+import { removeFromBasket } from "../redux/actions";
 
 function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
   const store = useStore();
 
-  const removeFromBasket = () => {
+  const removeItemFromBasket = () => {
     // remove the item from the basket
     store.dispatch(removeFromBasket(id));
   };
@@ -24,11 +26,13 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>🌟</p>
+              <StarIcon key={i} className="product___rating_icon" />
             ))}
         </div>
         {!hideButton && (
-          <button onClick={removeFromBasket}>Remove from Basket</button>
+          <button onClick={removeItemFromBasket} className="remove_btn">
+            Remove from Basket
+          </button>
         )}
       </div>
     </div>

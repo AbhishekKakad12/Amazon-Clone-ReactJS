@@ -1,0 +1,113 @@
+    .view_product{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .product_img_div{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product_details_div{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product_checkout{
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 0.5px solid grey;
+        margin: 8px;
+        padding: 10px;
+    }
+    .product_title{
+        font-size: 30px;
+    }
+
+    .product___rating_icon{
+        color: #f0c14b;
+        font-size: 20px !important;
+    }
+    
+    .product__rating__reviews {
+        display: flex;
+        align-items: center;
+    }
+
+  .product__price {
+    margin: 0px;
+    font-size: 25px;
+  }
+  
+  .amz_at_a_glance_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 180px;  
+}
+
+  .amz_glance{
+    text-align: center;
+  }
+  .glance_img{
+    width: 45px;
+  }
+
+  .glance__text{
+    font-size: 15px !important;
+  }
+
+  .delivery_details, .offer, .sold_by{
+    font-size: 14px;
+    margin: 4px 0px !important;
+  }
+
+  .select_location{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    align-items: center;
+  }
+
+  .header__location_icon{
+    color: black;
+  }
+
+  .stock{
+    color: green;
+    font-size: 18px;
+    margin: 5px 0px;
+  }
+
+  .actions{
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add_to_cart{
+    margin: 15px 0px;
+    background: #ffd814;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .buy_now{
+    margin: 15px 0px;
+    background: #ffa41c;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+  }

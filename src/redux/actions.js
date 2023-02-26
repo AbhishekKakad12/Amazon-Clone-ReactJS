@@ -5,9 +5,10 @@ import {
   SET_USER,
 } from "./counter";
 
-export const addToBasket = () => {
+export const addToBasket = (item) => {
   return {
     type: ADD_TO_BASKET,
+    payload: item,
   };
 };
 export const emptyBasket = () => {
@@ -23,7 +24,6 @@ export const removeFromBasket = (id) => {
   };
 };
 export const setUser = (user) => {
-  console.log(user);
   return {
     type: SET_USER,
     payload: user,

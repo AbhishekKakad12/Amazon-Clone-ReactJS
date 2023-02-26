@@ -12,6 +12,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import { useStore } from "react-redux";
 import { setUser } from "./redux/actions";
+import ViewProduct from "./components/viewProduct";
 
 const promise = loadStripe(
   "pk_test_51HPvU9DFg5koCdLGJJbNo60QAU99BejacsvnKvT8xnCu1wFLCuQP3WBArscK3RvSQmSIB3N0Pbsc7TtbQiJ1vaOi00X9sIbazL"
@@ -21,8 +22,6 @@ function App() {
   const store = useStore();
 
   auth.onAuthStateChanged((authUser) => {
-    console.log("THE USER IS >>> ", authUser);
-
     if (authUser) {
       // the user just logged in / the user was logged in
 
@@ -59,6 +58,16 @@ function App() {
               <>
                 <Header />
                 <Home />
+              </>
+            }
+          ></Route>
+          <Route
+            exact
+            path="/view_product"
+            element={
+              <>
+                <Header />
+                <ViewProduct />
               </>
             }
           ></Route>

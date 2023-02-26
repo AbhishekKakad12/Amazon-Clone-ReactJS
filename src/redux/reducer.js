@@ -19,7 +19,7 @@ const reducer = (state, action) => {
     case ADD_TO_BASKET:
       return {
         ...state,
-        basket: [...state.basket, action.item],
+        basket: [...state.basket, action.payload.item],
       };
 
     case EMPTY_BASKET:
@@ -48,8 +48,6 @@ const reducer = (state, action) => {
       };
 
     case SET_USER:
-      console.log(action);
-
       return {
         user: action.payload,
         basket: [],
